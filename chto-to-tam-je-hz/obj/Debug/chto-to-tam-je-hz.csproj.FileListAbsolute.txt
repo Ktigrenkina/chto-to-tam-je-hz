@@ -1,0 +1,12 @@
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\bin\Debug\chto-to-tam-je-hz.exe.config
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\bin\Debug\chto-to-tam-je-hz.exe
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\bin\Debug\chto-to-tam-je-hz.pdb
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto-to-tam-je-hz.csprojAssemblyReference.cache
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.SignIn.resources
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Properties.Resources.resources
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto-to-tam-je-hz.csproj.GenerateResource.cache
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto-to-tam-je-hz.csproj.CoreCompileInputs.cache
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto-to-tam-je-hz.exe
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto-to-tam-je-hz.pdb
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.SignUp.resources
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.MainWindows.resources
