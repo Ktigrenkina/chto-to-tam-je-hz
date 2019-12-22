@@ -24,7 +24,7 @@ namespace chto_to_tam_je_hz
             TextBox tb = sender as TextBox;
             if (tb.Text == "" && tb.Name == "textBox1")
             {
-                tb.Text = "Login";
+                tb.Text = "Login или E-mail";
                 tb.ForeColor = Color.DimGray;
             }
             else if (tb.Text == "" && tb.Name == "textBox2")
@@ -40,7 +40,7 @@ namespace chto_to_tam_je_hz
         private void tb_Enter(object sender, EventArgs e)
         {
             TextBox tb = sender as TextBox;
-            if (tb.Text == "Login" || tb.Text == "Password")
+            if (tb.Text == "Login или E-mail" || tb.Text == "Password")
             {
                 tb.ForeColor = Color.Black;
                 tb.Text = string.Empty;
@@ -56,20 +56,31 @@ namespace chto_to_tam_je_hz
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string User_Login = textBox1.Text,
-                User_Password = textBox2.Text;
+            
+            string User_Login, UserEmail, User_Password = textBox2.Text;
+            if (textBox1.Text.IndexOf('@') == -1)
+            {
+                User_Login = textBox1.Text;
+                UserEmail = "";
+                
+            }
+            else
+            {
+                UserEmail = textBox1.Text;
+                User_Login = "";
+            }
             StreamReader sr = new StreamReader("users/UserInfo.txt");
             bool Aser = false;
             while (!sr.EndOfStream)
             {
-                string[] info = sr.ReadLine().Split('.');
-                if (info[0] == User_Login && info[1] == User_Password)
+                string[] info = sr.ReadLine().Split(',');
+                if ((info[0] == User_Login && info[1] == User_Password) || (info[2] == UserEmail && info[1] == User_Password))
                 {
                     Aser = true;
                     MessageBox.Show("Вы успешно авторизовались",
                         "Успешный вход", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
-                    Form MW = new MainWindows(info[0],info[2]);
+                    Form MW = new MainWindows(info[0],info[3]);
                     MW.Show();
                     this.Hide();
                     break;
@@ -78,7 +89,7 @@ namespace chto_to_tam_je_hz
             sr.Close();
             if (!Aser)
             {
-                MessageBox.Show("Неверный логин или пароль",
+                MessageBox.Show("Неверный логин/email или пароль",
                   "Ошибка входа", MessageBoxButtons.OK,
                   MessageBoxIcon.Error);
             }
@@ -97,5 +108,7 @@ namespace chto_to_tam_je_hz
             form2.Show();
             this.Hide();
         }
+
+       
     }
 }

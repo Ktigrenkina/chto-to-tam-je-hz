@@ -26,6 +26,27 @@ namespace chto_to_tam_je_hz
             Application.Exit();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form kub = new Kubiki();
+            kub.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form X0 = new X0();
+            X0.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form admin = new admin();
+            admin.Show();
+            this.Hide();
+        }
+
         private void MainWindows_Load(object sender, EventArgs e)
         {
             if (priv == "a")

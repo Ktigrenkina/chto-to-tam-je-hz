@@ -52,6 +52,12 @@
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kubiki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kubiki.Designer.cs">
+      <DependentUpon>Kubiki.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindows.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,18 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="X0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="X0.Designer.cs">
+      <DependentUpon>X0.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kubiki.resx">
+      <DependentUpon>Kubiki.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindows.resx">
       <DependentUpon>MainWindows.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="X0.resx">
+      <DependentUpon>X0.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

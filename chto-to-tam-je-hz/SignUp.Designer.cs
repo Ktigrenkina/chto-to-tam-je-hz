@@ -33,7 +33,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,21 +45,23 @@
             this.textBox1.Size = new System.Drawing.Size(174, 20);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Login";
-            this.textBox1.Leave += new System.EventHandler(this.SignUp_Leave);
+            this.textBox1.Enter += new System.EventHandler(this.tb_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.tb_Leave);
             // 
             // textBox2
             // 
             this.textBox2.ForeColor = System.Drawing.Color.DimGray;
             this.textBox2.Location = new System.Drawing.Point(26, 38);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
+            this.textBox2.Size = new System.Drawing.Size(152, 20);
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "Password";
-            this.textBox2.Leave += new System.EventHandler(this.SignUp_Leave);
+            this.textBox2.Enter += new System.EventHandler(this.tb_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.tb_Leave);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(26, 64);
+            this.button2.Location = new System.Drawing.Point(26, 90);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 26);
             this.button2.TabIndex = 6;
@@ -70,7 +72,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(206, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(184, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,16 +80,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // textBox3
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(23, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Такой пользователь уже существует";
-            this.label1.Visible = false;
+            this.textBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox3.Location = new System.Drawing.Point(26, 64);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(174, 20);
+            this.textBox3.TabIndex = 8;
+            this.textBox3.Text = "E-mail";
+            this.textBox3.Enter += new System.EventHandler(this.tb_Enter);
+            this.textBox3.Leave += new System.EventHandler(this.tb_Leave);
             // 
             // SignUp
             // 
@@ -95,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(286, 264);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
@@ -116,6 +118,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

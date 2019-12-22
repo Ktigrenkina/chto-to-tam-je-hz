@@ -65,7 +65,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(174, 20);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Login";
+            this.textBox1.Text = "Login или E-mail";
             this.textBox1.Enter += new System.EventHandler(this.tb_Enter);
             this.textBox1.Leave += new System.EventHandler(this.tb_Leave);
             // 

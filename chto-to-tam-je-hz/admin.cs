@@ -16,5 +16,16 @@ namespace chto_to_tam_je_hz
         {
             InitializeComponent();
         }
+
+        private void admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form frm = Application.OpenForms[1];
+            frm.Show();
+        }
     }
 }

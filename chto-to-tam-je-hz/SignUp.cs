@@ -28,16 +28,19 @@ namespace chto_to_tam_je_hz
         private void button2_Click(object sender, EventArgs e)
         {
             string UserLogin = textBox1.Text, 
-                UserPassword = textBox2.Text;
+                UserPassword = textBox2.Text,
+                UserEmail = textBox3.Text;
             bool IsFounded = true;
             StreamReader sr = new StreamReader("users/UserInfo.txt");
             while (!sr.EndOfStream)
             {
                 string[] info = sr.ReadLine().Split('.');
-                if (info[0] == UserLogin)
+                if (info[0] == UserLogin || info[2] == UserEmail)
                 {
                     IsFounded = false;
-                    label1.Visible = true;
+                    MessageBox.Show("Данный логин или E-mail уже используется",
+                  "Ошибка регистрации", MessageBoxButtons.OK,
+                  MessageBoxIcon.Warning);
                     break;
                 }
             }
@@ -45,10 +48,10 @@ namespace chto_to_tam_je_hz
             if (IsFounded)
             {
                 StreamWriter swinfo = new StreamWriter("users/UserInfo.txt", true);
-                swinfo.WriteLine(UserLogin + "."+UserPassword+".u");
+                swinfo.WriteLine(UserLogin + ","+UserPassword+",u" +UserEmail + ",u");
                 swinfo.Close();
-                MessageBox.Show("Вы успешно зарегистрировались",
-                  "Успешная регистрация", MessageBoxButtons.OK,
+                MessageBox.Show("Успешная регистрация",
+                  "Успешно", MessageBoxButtons.OK,
                   MessageBoxIcon.Information);
                 this.Close();
             }
@@ -62,7 +65,17 @@ namespace chto_to_tam_je_hz
                 textBox2.PasswordChar = '\0';
         }
 
-        private void SignUp_Leave(object sender, EventArgs e)
+        private void tb_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb.Text == "Login" || tb.Text == "Password" || tb.Text == "E-mail")
+            {
+                tb.ForeColor = Color.Black;
+                tb.Text = string.Empty;
+            }
+        }
+
+        private void tb_Leave(object sender, EventArgs e)
         {
             TextBox tb = sender as TextBox;
             if (tb.Text == "" && tb.Name == "textBox1")
@@ -76,6 +89,12 @@ namespace chto_to_tam_je_hz
                 tb.PasswordChar = '\0';
                 tb.ForeColor = Color.DimGray;
             }
+            else if (tb.Text == "" && tb.Name == "textBox3")
+            {
+                tb.Text = "E-mail";
+                tb.ForeColor = Color.DimGray;
+            }
+
         }
     }
 }
