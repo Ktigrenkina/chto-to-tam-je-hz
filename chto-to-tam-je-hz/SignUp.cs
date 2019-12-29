@@ -34,7 +34,7 @@ namespace chto_to_tam_je_hz
             StreamReader sr = new StreamReader("users/UserInfo.txt");
             while (!sr.EndOfStream)
             {
-                string[] info = sr.ReadLine().Split('.');
+                string[] info = sr.ReadLine().Split(',');
                 if (info[0] == UserLogin || info[2] == UserEmail)
                 {
                     IsFounded = false;
@@ -48,7 +48,7 @@ namespace chto_to_tam_je_hz
             if (IsFounded)
             {
                 StreamWriter swinfo = new StreamWriter("users/UserInfo.txt", true);
-                swinfo.WriteLine(UserLogin + ","+UserPassword+",u" +UserEmail + ",u");
+                swinfo.WriteLine(UserLogin + ","+UserPassword+"," +UserEmail + ",u,False");
                 swinfo.Close();
                 MessageBox.Show("Успешная регистрация",
                   "Успешно", MessageBoxButtons.OK,
@@ -94,6 +94,11 @@ namespace chto_to_tam_je_hz
                 tb.Text = "E-mail";
                 tb.ForeColor = Color.DimGray;
             }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -76,6 +76,8 @@ namespace chto_to_tam_je_hz
             }
         }
 
+       
+
         private void lb_click(object sender, EventArgs e)
         {
             Label lb = sender as Label;

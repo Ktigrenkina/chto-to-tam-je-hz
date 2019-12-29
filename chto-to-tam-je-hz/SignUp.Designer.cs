@@ -45,6 +45,7 @@
             this.textBox1.Size = new System.Drawing.Size(174, 20);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Login";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.tb_Enter);
             this.textBox1.Leave += new System.EventHandler(this.tb_Leave);
             // 
@@ -96,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(286, 264);
+            this.ClientSize = new System.Drawing.Size(237, 180);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);

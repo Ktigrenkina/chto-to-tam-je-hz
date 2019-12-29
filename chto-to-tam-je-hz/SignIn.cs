@@ -74,7 +74,8 @@ namespace chto_to_tam_je_hz
             while (!sr.EndOfStream)
             {
                 string[] info = sr.ReadLine().Split(',');
-                if ((info[0] == User_Login && info[1] == User_Password) || (info[2] == UserEmail && info[1] == User_Password))
+                if ((info[0] == User_Login && info[1] == User_Password) 
+                    || (info[2] == UserEmail && info[1] == User_Password))
                 {
                     Aser = true;
                     MessageBox.Show("Вы успешно авторизовались",
@@ -109,6 +110,11 @@ namespace chto_to_tam_je_hz
             this.Hide();
         }
 
-       
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form rfm = new VostanovlenieParola();
+            rfm.Show();
+            this.Hide();
+        }
     }
 }
