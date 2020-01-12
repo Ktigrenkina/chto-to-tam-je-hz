@@ -18,16 +18,8 @@ namespace chto_to_tam_je_hz
             InitializeComponent();
         }
 
-        private void admin_Load(object sender, EventArgs e)
+        public void FillDataGrid() //Заполняем датагрид датами из файлов
         {
-            using (StreamReader sr = new StreamReader("users/UserInfo.txt"))
-            {
-                while (!sr.EndOfStream)
-                {
-                    sr.ReadLine();
-                    dataGridView1.Rows.Add();
-                }
-            }
             using (StreamReader sr = new StreamReader("users/UserInfo.txt"))
             {
                 int CurrewRow = 0;
@@ -36,7 +28,7 @@ namespace chto_to_tam_je_hz
                     string[] tmp = sr.ReadLine().Split(',');
                     for (int i = 0; i < 5; i++)
                     {
-                        if (i > 4)
+                        if (i < 4)
                             dataGridView1[i, CurrewRow].Value = tmp[i];
 
                         else
@@ -46,25 +38,38 @@ namespace chto_to_tam_je_hz
                             else
                                 dataGridView1[i, CurrewRow].Value = false;
                         }
-                        
+
                     }
                     CurrewRow++;
                 }
             }
         }
 
-       
-
-        private void label1_Click(object sender, EventArgs e)
+        private void admin_Load(object sender, EventArgs e) //
         {
-            //perezapisivat fail
+            using (StreamReader sr = new StreamReader("users/UserInfo.txt"))
+            {
+                while (!sr.EndOfStream)
+                {
+                    sr.ReadLine();
+                    dataGridView1.Rows.Add();
+                }
+
+
+            }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void admin_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            Form frm = Application.OpenForms[1];
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e) //Сохранить изменения 
         {
             string ToFile = "";
             int RowsCount = dataGridView1.Rows.Count;
-            for(int i = 0; i < RowsCount; i++)
+            for (int i = 0; i < RowsCount; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
@@ -75,24 +80,25 @@ namespace chto_to_tam_je_hz
                         ToFile += dataGridView1[j, i].Value + "\n";
                     }
                 }
-                
+
             }
             using (StreamWriter sw = new StreamWriter("users/UserInfo.txt", false))
             {
                 string[] tmp = ToFile.Split('\n');
-                for(int i = 0; i < tmp.Length - 1; i++)
+                for (int i = 0; i < tmp.Length - 1; i++)
                 {
                     sw.WriteLine(tmp[i]);
                 }
             }
-            //dataGridView1.Refresh();
-            //MessageBox.Show(Tofile);
+            MessageBox.Show("Изменения успешно сохранены");
         }
 
-        private void admin_FormClosing_1(object sender, FormClosingEventArgs e)
+
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            Form frm = Application.OpenForms[1];
-            frm.Show();
+            FillDataGrid();
         }
+
     }
 }

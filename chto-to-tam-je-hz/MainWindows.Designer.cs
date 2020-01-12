@@ -33,6 +33,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -46,21 +53,24 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(663, 12);
+            this.button1.BackColor = System.Drawing.SystemColors.ControlText;
+            this.button1.ForeColor = System.Drawing.Color.Cyan;
+            this.button1.Location = new System.Drawing.Point(714, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 34);
+            this.button1.Size = new System.Drawing.Size(188, 51);
             this.button1.TabIndex = 1;
             this.button1.Text = "Админу";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.Location = new System.Drawing.Point(15, 109);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(6, 128);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 43);
+            this.button2.Size = new System.Drawing.Size(201, 77);
             this.button2.TabIndex = 2;
             this.button2.Text = "Игра кубики";
             this.button2.UseVisualStyleBackColor = false;
@@ -68,42 +78,104 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.BlueViolet;
+            this.button3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(15, 158);
+            this.button3.Location = new System.Drawing.Point(6, 87);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 44);
+            this.button3.Size = new System.Drawing.Size(201, 81);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Эпилепсия";
+            this.button3.Text = "Эпилепсия(в разработке)";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.CadetBlue;
-            this.button4.Location = new System.Drawing.Point(15, 65);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(6, 33);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 38);
+            this.button4.Size = new System.Drawing.Size(201, 74);
             this.button4.TabIndex = 4;
             this.button4.Text = "Крестики нолики";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 25);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(433, 350);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Zadachi";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Brown;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.Location = new System.Drawing.Point(213, 30);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(212, 74);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Лабиринт";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Location = new System.Drawing.Point(478, 66);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(424, 309);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Что то ненавистное";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(6, 19);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(188, 55);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "DataGrid";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Chartreuse;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button7.Location = new System.Drawing.Point(215, 128);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(212, 77);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Графика";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // MainWindows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.BackColor = System.Drawing.Color.BlueViolet;
+            this.ClientSize = new System.Drawing.Size(914, 414);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "MainWindows";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MainWindows";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindows_FormClosing);
             this.Load += new System.EventHandler(this.MainWindows_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +188,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

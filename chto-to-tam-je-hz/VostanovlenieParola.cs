@@ -82,6 +82,7 @@ namespace chto_to_tam_je_hz
                     SU.Show();
                     this.Close();
                 }
+                //Если пойчта не зарегана то высветитс сообщение с просьбой про ти регистрацию
             }
         }
 
@@ -98,6 +99,7 @@ namespace chto_to_tam_je_hz
                 MessageBox.Show( "Ваш пароль: " + UserPassword, "Восстановление пароля",
                     MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
+            //
         }
 
         private void timer1_Tick(object sender, EventArgs e)

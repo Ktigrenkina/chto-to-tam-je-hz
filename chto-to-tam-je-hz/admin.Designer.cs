@@ -33,8 +33,10 @@
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rights = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rights = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.IsBanned = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +64,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(614, 261);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Login
             // 
@@ -88,8 +89,12 @@
             // Rights
             // 
             this.Rights.HeaderText = "Rights";
+            this.Rights.Items.AddRange(new object[] {
+            "a",
+            "u"});
             this.Rights.Name = "Rights";
-            this.Rights.ReadOnly = true;
+            this.Rights.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Rights.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Rights.Width = 50;
             // 
             // IsBanned
@@ -98,17 +103,37 @@
             this.IsBanned.Name = "IsBanned";
             this.IsBanned.Width = 70;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 283);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(252, 43);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Отменить изменения";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(365, 283);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(252, 43);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Сохранить изменения";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SlateBlue;
+            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "admin";
             this.Text = "admin";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.admin_FormClosing_1);
             this.Load += new System.EventHandler(this.admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -120,10 +145,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Login;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rights;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Rights;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsBanned;
     }
 }

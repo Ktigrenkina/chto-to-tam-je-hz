@@ -1,0 +1,2 @@
+admin,admin,admin@admin.mail,a,False
+Ktigre,2005,ktigrenkina@gmail.com,u,False

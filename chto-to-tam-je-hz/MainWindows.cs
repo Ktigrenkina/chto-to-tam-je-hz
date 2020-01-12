@@ -47,6 +47,27 @@ namespace chto_to_tam_je_hz
             this.Hide();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form DFG = new DataGrid();
+            DFG.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form game = new Game();
+            game.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form graf = new Grafika();
+            graf.Show();
+            this.Hide();
+        }
+
         private void MainWindows_Load(object sender, EventArgs e)
         {
             if (priv == "a")

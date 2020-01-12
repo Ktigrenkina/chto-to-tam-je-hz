@@ -1,3 +1,2 @@
-admin,admin,admin@mail.ru,a,ub
-Tigrenka,2005,tigrenkinamuy@gmail.com,u,ub
-Chainik,tea,Ktigrenkina@gmail.com,u,b
+admin,admin,admin@admin.mail,a,False
+Ktigre,2005,ktigrenkina@gmail.com,a,False

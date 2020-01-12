@@ -52,6 +52,24 @@
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataGrid.Designer.cs">
+      <DependentUpon>DataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafika.Designer.cs">
+      <DependentUpon>Grafika.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kubiki.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +110,15 @@
     </Compile>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataGrid.resx">
+      <DependentUpon>DataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafika.resx">
+      <DependentUpon>Grafika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kubiki.resx">
       <DependentUpon>Kubiki.cs</DependentUpon>

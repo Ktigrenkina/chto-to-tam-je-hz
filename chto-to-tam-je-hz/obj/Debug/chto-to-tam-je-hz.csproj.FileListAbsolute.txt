@@ -14,3 +14,6 @@ D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.admin.
 D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Kubiki.resources
 D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.X0.resources
 D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.VostanovlenieParola.resources
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.DataGrid.resources
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Game.resources
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Grafika.resources

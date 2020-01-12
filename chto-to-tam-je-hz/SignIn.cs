@@ -77,14 +77,25 @@ namespace chto_to_tam_je_hz
                 if ((info[0] == User_Login && info[1] == User_Password) 
                     || (info[2] == UserEmail && info[1] == User_Password))
                 {
-                    Aser = true;
-                    MessageBox.Show("Вы успешно авторизовались",
-                        "Успешный вход", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    Form MW = new MainWindows(info[0],info[3]);
-                    MW.Show();
-                    this.Hide();
-                    break;
+                    if (info[4] == "False")
+                    {
+                        Aser = true;
+                        MessageBox.Show("Вы успешно авторизовались",
+                            "Успешный вход", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        Form MW = new MainWindows(info[0], info[3]);
+                        MW.Show();
+                        this.Hide();
+                        break;
+                    }
+                    else
+                    {
+                        Aser = true;
+                        MessageBox.Show("Извините, но Ваша учетная запись была забанена Администрацией" +
+                            "Заблокированно", "Авторизация невозможна", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        break;
+                    }
                 }
             }
             sr.Close();

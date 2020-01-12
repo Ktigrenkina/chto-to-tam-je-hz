@@ -79,11 +79,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkKhaki;
             this.ClientSize = new System.Drawing.Size(237, 180);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
+            this.ForeColor = System.Drawing.Color.DarkBlue;
             this.Name = "VostanovlenieParola";
             this.Text = "VostanovlenieParola";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VostanovlenieParola_FormClosing);
