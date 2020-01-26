@@ -17,3 +17,4 @@ D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Vostan
 D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.DataGrid.resources
 D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Game.resources
 D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Grafika.resources
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Tasks.resources

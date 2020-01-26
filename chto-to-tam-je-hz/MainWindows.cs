@@ -68,6 +68,13 @@ namespace chto_to_tam_je_hz
             this.Hide();
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form tasks = new Tasks();
+            tasks.Show();
+            this.Hide();
+        }
+
         private void MainWindows_Load(object sender, EventArgs e)
         {
             if (priv == "a")
