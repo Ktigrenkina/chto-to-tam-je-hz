@@ -65,7 +65,7 @@ namespace chto_to_tam_je_hz
             richTextBox1.Text = "";
             Random R = new Random();
             int[] tea = new int[50];
-            int min = 100, max = -100, a = 0;
+            int min = 100, max = -100;
             for (int i = 0; i < 50; i++)
             {
                 tea[i] = R.Next(-100, 100);
@@ -83,6 +83,81 @@ namespace chto_to_tam_je_hz
             }
             richTextBox1.Text = max + "\n";
             richTextBox1.Text = min + "\n";
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Text = ""; richTextBox1.Text = ""; richTextBox3.Text = "";
+            Random r = new Random();
+            int[] teak = new int[50];
+            for (int j = 0; j < 50; j++)
+            {
+                teak[j] = r.Next(-100, 100);
+                richTextBox1.Text += "mass[" + j.ToString() + "]=" +
+                    teak[j].ToString() + "\n";
+                if (teak[j] > 0)
+                {
+                    richTextBox2.Text += teak[j] + "\n";
+                }
+                if(teak[j] % 3 == 0)
+                {
+                    richTextBox3.Text += teak[j] + "\n";
+                }
+            }
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Text = ""; richTextBox1.Text = ""; richTextBox3.Text = "";
+            int[] kofe = new int[10];
+            Random r = new Random();
+            for(int k = 0; k < 10; k++)
+            {
+                kofe[k] = r.Next(10, 100);
+                richTextBox2.Text += kofe[k].ToString() + "\n";
+            }
+            for (int u = 0; u < 9; u++)
+            {
+                for (int l = 0; l < 9; l++)
+                {
+                    if (kofe[l] < kofe[l + 1])
+                    {
+                        int tmp = kofe[l];
+                        kofe[l] = kofe[l + 1];
+                        kofe[l + 1] = tmp;
+                    }
+                }
+            }
+            for (int k = 0; k < 10; k++)
+            {
+                richTextBox3.Text += kofe[k].ToString() + "\n";
+            }
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Random r = new Random();
+            List<int> list = new List<int>();
+            for (int i = 0; i < 20; i++)
+            {
+                list.Add(r.Next(-1000, 1000));
+                richTextBox1.Text += list[i] + " ";
+            }
+            for(int i = 0; i < 20; i++)
+            {
+                if(list[i] >= -99 && list[i] <= -10 
+                    || list[i] <= 99 && list[i] >= 10)
+                {
+                    list.RemoveAt(i);
+                }
+            }
+            for (int i = 0; i < 20; i++)
+            {
+                richTextBox1.Text = list[i] + "\n";
+            }
         }
     }
 }
