@@ -25,8 +25,8 @@ namespace chto_to_tam_je_hz
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int  N = 10, V = 0, S = 100000;
-            double dsch= 0.22, z;
+            int  N = Convert.ToInt32(textBox1.Text), V = Convert.ToInt32(textBox1.Text), S = Convert.ToInt32(textBox1.Text);
+            double dsch = Convert.ToDouble(textBox1.Text), z;
             Random r = new Random();
             for(int i = 1; i <= 10; i++)
             {
@@ -35,10 +35,7 @@ namespace chto_to_tam_je_hz
                 {
                     V += S;
                 }
-                
             }
-            textBox1.Text += N;
-            textBox2.Text += 
         }
     }
 }
