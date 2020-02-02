@@ -139,14 +139,15 @@ namespace chto_to_tam_je_hz
 
         private void button5_Click(object sender, EventArgs e)
         {
+            richTextBox2.Text = ""; richTextBox1.Text = "";
             Random r = new Random();
             List<int> list = new List<int>();
             for (int i = 0; i < 20; i++)
             {
                 list.Add(r.Next(-1000, 1000));
-                richTextBox1.Text += list[i] + " ";
+                richTextBox1.Text += list[i] + "\n";
             }
-            for(int i = 0; i < 20; i++)
+            for(int i = 0; i < list.Count; i++)
             {
                 if(list[i] >= -99 && list[i] <= -10 
                     || list[i] <= 99 && list[i] >= 10)
@@ -154,9 +155,9 @@ namespace chto_to_tam_je_hz
                     list.RemoveAt(i);
                 }
             }
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < list.Count; i++)
             {
-                richTextBox1.Text = list[i] + "\n";
+                richTextBox2.Text += list[i] + "\n";
             }
         }
     }

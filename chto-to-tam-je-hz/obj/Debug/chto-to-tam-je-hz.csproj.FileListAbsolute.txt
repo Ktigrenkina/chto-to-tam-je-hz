@@ -18,3 +18,4 @@ D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.DataGr
 D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Game.resources
 D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Grafika.resources
 D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.Tasks.resources
+D:\сюз\chto-to-tam-je-hz\chto-to-tam-je-hz\obj\Debug\chto_to_tam_je_hz.BoxTet.resources
