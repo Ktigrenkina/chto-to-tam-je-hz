@@ -38,3 +38,5 @@ D:\сюз\chto-to-tam-je-hz\kafe\kafe\obj\Debug\kafe.csproj.CoreCompileInputs.ca
 D:\сюз\chto-to-tam-je-hz\kafe\kafe\obj\Debug\kafe.csproj.CopyComplete
 D:\сюз\chto-to-tam-je-hz\kafe\kafe\obj\Debug\kafe.exe
 D:\сюз\chto-to-tam-je-hz\kafe\kafe\obj\Debug\kafe.pdb
+D:\сюз\chto-to-tam-je-hz\kafe\kafe\obj\Debug\kafe.AddPost2.resources
+D:\сюз\chto-to-tam-je-hz\kafe\kafe\obj\Debug\kafe.AddStaff3.resources

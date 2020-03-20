@@ -65,6 +65,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPost2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPost2.Designer.cs">
+      <DependentUpon>AddPost2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStaff3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaff3.Designer.cs">
+      <DependentUpon>AddStaff3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +85,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddPost2.resx">
+      <DependentUpon>AddPost2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStaff3.resx">
+      <DependentUpon>AddStaff3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
