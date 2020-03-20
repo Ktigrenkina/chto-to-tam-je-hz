@@ -30,8 +30,15 @@ namespace kafe
             SQLiteCommand cmd = new SQLiteCommand();
             cmd.Connection = conn;
             conn.Open();
-            cmd.CommandText = "WHERE наименование = 'кассирр'";
-            for(int i = 0; i < )
+            cmd.CommandText = "Select count(*) from Должность" +
+                " WHERE наименование = '" + textBox1.Text + "'";
+            int i = Convert.ToInt32(cmd.ExecuteScalar());
+            cmd.Reset();
+            if (i == 0)
+            {
+                cmd.CommandText = "insert into Должность (наименование) values('"+textBox1+"')";
+            }
+            
 
             conn.Close();
         }
